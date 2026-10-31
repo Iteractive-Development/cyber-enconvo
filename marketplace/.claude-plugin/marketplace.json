@@ -1,0 +1,23 @@
+{
+  "name": "cyber-enconvo",
+  "owner": {
+    "name": "Iteractive Development",
+    "url": "https://iteractive.dev"
+  },
+  "description": "Cybersecurity for Enconvo, one updatable plugin: AppSec, offensive, detection, cloud, compliance, AI security, governance, plus Cloudflare's security-audit. Built from briiirussell/cybersecurity-skills and cloudflare/security-audit-skill (MIT). By Iteractive Development.",
+  "plugins": [
+    {
+      "name": "cyber-enconvo",
+      "source": "./plugins/cyber-enconvo",
+      "description": "Cybersecurity agents for Enconvo: AppSec and supply chain, offensive and recon, detection and response, cloud, compliance, AI security, and governance - plus Cloudflare's multi-phase security-audit. 43 skills in one updatable plugin, each at its upstream path.",
+      "author": {
+        "name": "Iteractive Development",
+        "url": "https://iteractive.dev"
+      },
+      "category": "development",
+      "keywords": [
+        "cyber"
+      ]
+    }
+  ]
+}

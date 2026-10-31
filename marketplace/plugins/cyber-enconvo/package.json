@@ -1,0 +1,191 @@
+{
+  "$schema": "https://enconvo.com/schemas/extension.json",
+  "name": "cyber-enconvo",
+  "version": "1.0.0",
+  "title": "Cybersecurity",
+  "description": "Cybersecurity agents for Enconvo: AppSec and supply chain, offensive and recon, detection and response, cloud, compliance, AI security, and governance - plus Cloudflare's multi-phase security-audit. 43 skills in one updatable plugin, each at its upstream path.",
+  "author": "Iteractive Development",
+  "license": "MIT",
+  "keywords": [
+    "cyber"
+  ],
+  "skills": [
+    {
+      "name": "agent-supply-chain-audit",
+      "description": "Audit the extensions AI coding agents load and trust (skills, plugins, marketplaces, hooks, settings, MCP servers, and instruction files like CLAUDE.md, AGENTS.md, GEMINI.md, .cursor/rules and copilot-instructions.md) across Claude Code, Cursor, Codex, Gemini CLI and GitHub Copilot. Read-only: inventories each item with its source and pin, greps for hidden instructions, exfiltration, credential reads, persistence, curl|bash and over-broad tool grants, reviews hooks and MCP pinning and tool poisoning, and gives each item a SAFE / CAUTION / DO-NOT-INSTALL verdict. Use when the user mentions 'audit my skills,' 'is this skill malicious,' 'is this skill safe,' 'is this MCP server safe,' 'review CLAUDE.md,' 'review AGENTS.md,' 'plugin security,' 'check my hooks,' 'audit my MCP servers,' 'agent supply chain,' 'SkillSpector,' 'tool poisoning,' 'rug pull,' or is about to install a skill, plugin, or MCP server."
+    },
+    {
+      "name": "ai-risk-management",
+      "description": "Apply the NIST AI Risk Management Framework (AI RMF 1.0) and adjacent guidance to AI / ML systems \u2014 model lifecycle governance, fairness and bias evaluation, robustness, transparency, accountability, third-party model risk, monitoring for drift, and AI incident response. Broader than prompt-injection (which is the security slice). Use when the user mentions 'AI risk,' 'AI governance,' 'NIST AI RMF,' 'AI compliance,' 'ML governance,' 'model risk management,' 'AI fairness,' 'AI bias,' 'algorithmic accountability,' 'AI Bill of Rights,' 'EU AI Act,' 'AI transparency,' 'model card,' 'AI red-team program,' 'AI safety,' 'responsible AI,' 'model drift,' 'concept drift,' 'AI monitoring,' 'AI incident,' or needs to assess or govern an AI / ML system."
+    },
+    {
+      "name": "api-audit",
+      "description": "Audit REST, GraphQL, and RPC APIs against the OWASP API Security Top 10 (2023). Use when the user mentions 'API security,' 'API audit,' 'BOLA,' 'broken object level authorization,' 'BFLA,' 'function-level authorization,' 'mass assignment,' 'API rate limiting,' 'GraphQL security,' 'REST security,' 'API authentication,' 'API authorization,' 'excessive data exposure,' or needs to review API endpoints for security weaknesses."
+    },
+    {
+      "name": "breach-patterns",
+      "description": "Learn from public breach disclosures \u2014 extract the audit question each one implies and check your own stack. Capital One IMDS abuse, LastPass vault exfiltration, Okta Lapsus$, Snowflake credential reuse, MOVEit, SolarWinds, Equifax, Target POS, Codecov, Uber, Twilio \u2014 what would you check now if your boss said 'could that happen to us?' Use when the user mentions 'breach analysis,' 'lessons learned,' 'security postmortem,' 'breach patterns,' 'breach lessons,' 'has this happened to us,' 'apply breach lessons,' 'preempt breaches,' 'security retrospective,' 'real-world security incidents,' or wants to harden against known attacker playbooks."
+    },
+    {
+      "name": "business-logic-testing",
+      "description": "Test an authorized web application for business-logic flaws and race conditions \u2014 the classes scanners cannot find. Model invariants (conservation of value, uniqueness, monotonicity, exclusivity), build an Actor x Action x Resource matrix, abuse state machines (skip/reorder/replay steps, limit-slicing), find numeric bugs (float-vs-decimal rounding, cross-currency refund arbitrage, negative amounts), stale feature gates, and saga gaps; prove concurrency bugs (double-spend, lost update, idempotency-key reuse) with controlled parallel requests. Use when the user mentions 'business logic testing,' 'race condition,' 'double spend,' 'TOCTOU,' 'concurrency bug,' 'idempotency,' 'coupon reuse,' 'workflow bypass,' 'limit bypass,' 'negative amount,' 'refund arbitrage,' 'parallel request attack,' or 'logic flaw.'"
+    },
+    {
+      "name": "cicd-security",
+      "description": "Audit CI/CD pipelines, GitHub Actions first and GitLab CI and CircleCI briefly, for the paths that give an outsider code execution, secrets or a write token: pull_request_target and workflow_run running untrusted code, expression injection into run steps, missing or broad workflow permissions, third-party actions not pinned to a commit SHA, OIDC trust policies with wildcard subjects, self-hosted runners on public repos, secrets reaching forks, cache and artifact trust between workflows, and AI agents in CI that read issue or PR text while holding a write token. Runs zizmor and actionlint read-only and writes findings.json. Use when the user mentions 'pull_request_target,' 'pwn request,' 'workflow injection,' 'zizmor,' 'actionlint,' 'pin actions to SHA,' 'GITHUB_TOKEN permissions,' 'self-hosted runner,' 'claude-code-action,' 'AI agent in CI,' 'GitLab CI security,' 'CircleCI security,' 'is this workflow safe,' or needs to secure a build pipeline."
+    },
+    {
+      "name": "cloud-audit",
+      "description": "Audit cloud infrastructure (AWS, GCP, Azure) and PaaS deployment platforms (Vercel, Netlify, Heroku, Render, Railway, Fly) for misconfigurations, excessive permissions, stale or manual production deploys, and security gaps. Use when the user mentions 'cloud security,' 'cloud audit,' 'AWS security,' 'GCP security,' 'Azure security,' 'IAM audit,' 'S3 bucket,' 'cloud misconfiguration,' 'cloud hardening,' 'Vercel security,' 'Heroku audit,' 'Render audit,' 'PaaS security,' 'is production built from main,' 'old vercel.app still live,' 'preview deployments exposed,' 'Supabase RLS,' or needs to review cloud or deployment-platform security."
+    },
+    {
+      "name": "container-audit",
+      "description": "Audit container images, Dockerfiles, and Kubernetes manifests for misconfigurations, excessive privileges, exposed secrets, and runtime risks. Use when the user mentions 'container security,' 'Docker security,' 'Dockerfile audit,' 'Kubernetes security,' 'K8s security,' 'pod security,' 'container hardening,' 'kubectl audit,' 'image scanning,' 'distroless,' 'rootless containers,' 'pod security policy,' 'pod security standards,' 'PSS,' 'network policy,' 'OPA Gatekeeper,' 'Kyverno,' 'runtime security,' or needs to review container or orchestration security."
+    },
+    {
+      "name": "control-audit",
+      "description": "Control-level audit readiness for SOC 2, ISO/IEC 27001:2022 and NIST SP 800-53 Rev. 5 / FedRAMP. Scope the audit (criteria or baseline, systems, period, Type 1 vs Type 2), build the control inventory, write an evidence request per control (artifact, owner, sample, test method), test what the repo and configs show (CC8.1 / A.8.32 / CM-3 change management via branch protection), hand technical checks to the owning skill, and record control gaps in the shared findings format with a control matrix. Use when the user mentions 'SOC 2,' 'SOC 2 Type 2,' 'Trust Services Criteria,' 'ISO 27001,' 'ISMS,' 'Statement of Applicability,' 'Annex A controls,' 'NIST 800-53,' 'FedRAMP,' 'FedRAMP 20x,' 'SSP,' 'POA&M,' 'control matrix,' 'evidence request list,' 'PBC list,' 'audit readiness,' 'control testing,' or is getting ready for an external auditor or assessor."
+    },
+    {
+      "name": "crypto-audit",
+      "description": "Audit cryptography implementation \u2014 algorithm choice, key sizes, KDF parameters, IV/nonce handling, signature verification, randomness, TLS configuration, and key rotation. Deeper than owasp-audit A04. Use when the user mentions 'crypto review,' 'cryptography audit,' 'encryption review,' 'KDF,' 'PBKDF2,' 'Argon2,' 'bcrypt cost,' 'IV reuse,' 'nonce reuse,' 'AES mode,' 'AES-GCM,' 'AES-ECB,' 'signature verification,' 'TLS configuration,' 'cipher suites,' 'key rotation,' 'libsodium,' 'BoringSSL,' or 'is this crypto right.'"
+    },
+    {
+      "name": "csf-mapping",
+      "description": "Map your security posture against the NIST Cybersecurity Framework 2.0 (Govern, Identify, Protect, Detect, Respond, Recover). Produce a gap analysis, current/target tier assessment, and roadmap in the governance language that boards, auditors, and CISOs actually use. Use when the user mentions 'NIST CSF,' 'CSF 2.0,' 'cybersecurity framework,' 'security posture,' 'governance mapping,' 'CSF gap analysis,' 'CSF tiers,' 'cybersecurity maturity,' 'security roadmap,' 'CISO report,' 'board reporting,' 'security program,' or needs to translate technical findings into governance language."
+    },
+    {
+      "name": "dependency-audit",
+      "description": "Audit project dependencies, frameworks, languages, and dev tools for known vulnerabilities, CVEs, and security anti-patterns. Use when the user mentions 'dependency audit,' 'npm audit,' 'CVE,' 'vulnerable packages,' 'supply chain security,' 'outdated dependencies,' 'known vulnerabilities,' 'security advisory,' 'package security,' 'framework vulnerability,' 'is this package safe,' 'pnpm audit,' 'yarn audit,' 'bundle audit,' 'patch this CVE,' 'audit fix broke,' 'lockfile diff,' 'dependency confusion,' 'registry redirection,' 'MCP server pinning,' 'release pipeline,' or needs to check whether their stack, CI, or release pipeline has known security issues."
+    },
+    {
+      "name": "disk-forensics",
+      "description": "Analyze disk images, file systems, and memory captures for digital evidence recovery in forensic investigations and CTF challenges. Use when the user mentions 'disk forensics,' 'forensic analysis,' 'disk image,' 'file carving,' 'deleted files,' 'evidence recovery,' 'timeline analysis,' 'memory forensics,' 'volatility,' 'autopsy,' 'sleuthkit,' 'plaso,' 'log2timeline,' 'artifact analysis,' 'chain of custody,' or needs to examine a forensic image."
+    },
+    {
+      "name": "finding-triage",
+      "description": "Triage a single security finding \u2014 from a scanner, audit, advisory, report, or a findings.json record \u2014 to a defensible disposition with calibrated severity, a mitigation plan, false-positive justification, or accepted-risk writeup. Use when the user mentions 'triage this finding,' 'is this a real vulnerability,' 'mitigation plan,' 'false positive,' 'accept this risk,' 'compensating controls,' 'risk justification,' 'security ticket,' 'CVSS this,' 'what severity is this,' 'is this really high,' 'severity calibration,' 'needs validation,' 'hardening note,' 'findings.json,' 'should we fix this,' 'disposition,' 'sign off on,' or has a single security finding and needs to decide what to do."
+    },
+    {
+      "name": "fuzzing-harness",
+      "description": "Write and run a fuzzer, fuzz harnesses and property-based tests for the code that handles untrusted bytes (file and packet parsers in C, C++, Rust, Go, Python or JS, decoders, serializers, deserializers, token and header parsing, protocol state machines), then minimize, dedupe and triage the crashes into verified findings with regression tests. Covers libFuzzer, cargo-fuzz, Go native fuzzing, Atheris, Jazzer.js and Jazzer, Hypothesis, fast-check and proptest, seed corpora and dictionaries, sanitizer builds, and CI fuzzing with ClusterFuzzLite or OSS-Fuzz. Use when the user mentions 'fuzzing,' 'fuzz harness,' 'fuzz target,' 'libFuzzer,' 'cargo fuzz,' 'go test -fuzz,' 'Atheris,' 'Jazzer,' 'property-based testing,' 'Hypothesis property test,' 'fast-check,' 'proptest,' 'seed corpus,' 'fuzzing dictionary,' 'AddressSanitizer report,' 'fuzzer crash files,' 'minimize a crash input,' 'ClusterFuzzLite,' 'OSS-Fuzz,' or wants to fuzz their parser."
+    },
+    {
+      "name": "hipaa-audit",
+      "description": "Audit applications and infrastructure handling Protected Health Information against HIPAA \u2014 Security Rule (administrative, physical, technical safeguards), Privacy Rule, Breach Notification Rule, plus HITECH. Covers ePHI scoping, the 18 HIPAA identifiers, Business Associate Agreement (BAA) chain-of-liability, minimum-necessary standard, and breach notification timing. Use when the user mentions 'HIPAA,' 'HIPAA Security Rule,' 'HIPAA Privacy Rule,' 'PHI,' 'ePHI,' 'protected health information,' 'BAA,' 'business associate agreement,' 'covered entity,' 'business associate,' 'minimum necessary,' 'HIPAA breach,' 'HITECH,' 'healthcare compliance,' 'medical data,' 'patient data,' or audits any system that creates, receives, maintains, or transmits PHI."
+    },
+    {
+      "name": "iam-audit",
+      "description": "Audit, design, and migrate Identity and Access Management \u2014 cloud provider IAM (AWS, GCP, Azure), identity providers (Okta, Entra ID / Azure AD, Auth0, Google Workspace), application authorization (RBAC, ABAC, ReBAC), and federated identity. Use when the user mentions 'IAM,' 'identity,' 'access management,' 'least privilege,' 'role design,' 'SSO,' 'SAML,' 'OIDC,' 'OAuth,' 'JIT access,' 'just-in-time access,' 'break-glass,' 'service accounts,' 'RBAC,' 'ABAC,' 'privilege creep,' 'role explosion,' 'identity governance,' 'IAM strategy,' 'identity migration,' 'Okta,' 'Entra ID,' 'Azure AD,' 'Auth0,' 'Cognito,' or needs identity consultant-level guidance."
+    },
+    {
+      "name": "incident-triage",
+      "description": "Guide rapid triage and initial response to a live security incident happening right now (ransomware hitting a file server, an attacker still in the network, a new admin user nobody created, a host compromised through a CVE) following NIST SP 800-61 Rev. 3 (CSF 2.0 Respond and Recover) \u2014 declare, validate and prioritize, contain, preserve evidence, scope, extract IOCs, start the notification clocks, and hand off to eradication, recovery and lessons learned. Use when the user mentions 'incident response,' 'security incident,' 'incident triage,' 'active incident,' 'we've been hacked,' 'we've been breached,' 'compromised,' 'ransomware,' 'contain the incident,' 'malware detected,' 'suspicious activity,' 'IOC,' 'indicators of compromise,' or needs help handling a security event."
+    },
+    {
+      "name": "log-watch",
+      "description": "Set up a scheduled agent that reads a small team's existing production logs, flags suspicious activity, and pages a human, without a SIEM or security staff. Use when the user mentions 'log watch,' 'watch my logs,' 'alert me if someone is attacking,' 'no SIEM,' 'poor man's SIEM,' 'agent reads CloudTrail,' 'cron job that checks logs,' 'page me on suspicious logins,' 'Vercel logs alerting,' 'Sentry security alerts,' 'Supabase auth logs,' 'Stripe dispute spike,' 'credential stuffing alert,' 'two-stage classifier,' 'Haiku then Sonnet,' 'log monitoring cost,' or has Vercel / Heroku / Render / Sentry / Postgres / Stripe / Cloudflare / CloudTrail / GitHub logs and wants to know when something bad happens."
+    },
+    {
+      "name": "malware-triage",
+      "description": "Triage a suspicious file statically and safely, and turn it into something defenders can use: a verdict with confidence and evidence, defanged indicators as CSV or STIX 2.1, a YARA signature tested against goodware, and ATT&CK-mapped capabilities to hand to detection and hunting. Covers safe handling, sample identity (SHA-256, ssdeep, TLSH, imphash), reputation lookup without uploading, file type, entropy and packers, strings and FLOSS, PE / ELF / Mach-O metadata, script and Office macro deobfuscation, archives, LNK and ISO, and capa. Use when the user mentions 'malware triage,' 'malware analysis,' 'analyze this sample,' 'suspicious file,' 'is this file malicious,' 'suspicious attachment,' 'malicious macro,' 'maldoc,' 'olevba,' 'capa,' 'FLOSS,' 'packed binary,' 'imphash,' 'YARA,' 'VirusTotal,' 'defang,' 'STIX,' or has a binary, script or document they want looked at without running it."
+    },
+    {
+      "name": "mobile-audit",
+      "description": "Audit iOS and Android mobile applications against OWASP MASVS / MASTG \u2014 insecure storage, weak crypto, certificate pinning, deeplinks, IPC, jailbreak/root detection, reverse-engineering resistance. Use when the user mentions 'mobile security,' 'iOS security,' 'Android security,' 'mobile audit,' 'mobile pentest,' 'MASVS,' 'MASTG,' 'certificate pinning,' 'jailbreak detection,' 'root detection,' 'deeplink,' 'URL scheme,' 'app transport security,' 'keychain,' 'keystore,' 'mobile reverse engineering,' or has a mobile app to review."
+    },
+    {
+      "name": "native-code-review",
+      "description": "Review C, C++ and Rust source for memory-safety bugs: out-of-bounds reads and writes, integer overflow or truncation that feeds a size, use-after-free and double free, format strings, uninitialized memory, Rust unsafe soundness, FFI boundaries, parsers of untrusted input, and secrets left in memory. Also checks compiler hardening flags and recommends sanitizers, and reports in the shared findings.json format. Use when the user mentions 'native code review,' 'C code review,' 'C++ security review,' 'memory safety review,' 'buffer overflow,' 'use-after-free,' 'double free,' 'format string bug,' 'integer overflow,' 'uninitialized memory,' 'unsafe Rust,' 'is this unsafe block sound,' 'FFI boundary,' 'Miri,' 'AddressSanitizer,' 'checksec,' 'FORTIFY_SOURCE,' 'hardening flags,' 'explicit_bzero,' or 'zeroize.'"
+    },
+    {
+      "name": "osint-recon",
+      "description": "Gather and correlate open source intelligence from public sources for authorized investigations, threat intelligence, and attack surface assessment. Use when the user mentions 'OSINT,' 'open source intelligence,' 'digital footprint,' 'public records,' 'threat intelligence,' 'investigate a domain,' or needs to research a target using publicly available data."
+    },
+    {
+      "name": "owasp-audit",
+      "description": "Audit application source code against the OWASP Top 10:2025 categories \u2014 broken access control (incl. SSRF), security misconfiguration, software supply chain failures, cryptographic failures, injection, insecure design, authentication failures, software and data integrity, logging and alerting failures, mishandling of exceptional conditions \u2014 with recon, a coverage ledger, per-finding verification, and a findings.json report. Use when the user mentions 'OWASP,' 'OWASP Top 10,' 'security audit,' 'security review,' 'secure code review,' 'code security review,' 'vulnerability audit,' 'find vulnerabilities,' 'appsec review,' 'application security audit,' 'check for security issues,' 'review this PR for security,' 'pre-merge security check,' 'diff review,' 'broken access control,' 'IDOR,' 'SQL injection,' 'XSS,' 'SSRF,' 'webhook security,' or wants to check their codebase for common security weaknesses."
+    },
+    {
+      "name": "patch-sweep",
+      "description": "Respond to a CVE wave across a whole portfolio of apps at once: inventory every repo and the platform project and domain it actually serves, find the real production branch, spot stale manual deploys, decide which apps are affected, mitigate, patch, ship, and confirm production. Use when the user mentions 'patch sweep,' 'patch all my apps,' 'fleet-wide CVE,' 'are any of my apps affected,' 'Next.js RCE across all projects,' 'Rails CVE on all our Heroku apps,' 'patch every repo,' 'CVE wave,' 'security release across the fleet,' 'which of our sites run the vulnerable version,' 'mass dependency update,' or has more than a handful of apps to patch against the same advisories."
+    },
+    {
+      "name": "pci-audit",
+      "description": "Audit applications and infrastructure handling payment card data against PCI DSS v4.0.1. Heavy emphasis on scope determination (the single most-leveraged variable) plus the engineering-relevant requirements \u2014 Req 3 (storage of CHD), Req 4 (transmission), Req 6 (secure SDLC), Req 7-8 (access), Req 10 (logging), Req 11 (testing), Req 12 (program). Use when the user mentions 'PCI,' 'PCI DSS,' 'PCI DSS 4.0,' 'payment card,' 'cardholder data,' 'CHD,' 'PAN,' 'PCI scope,' 'PCI compliance,' 'SAQ,' 'AoC,' 'attestation of compliance,' 'tokenization,' 'P2PE,' 'network segmentation for PCI,' or audits any system that stores, processes, or transmits payment card data."
+    },
+    {
+      "name": "personal-opsec",
+      "description": "Audit one person's own security setup \u2014 the founder or operator who holds the keys to the stack \u2014 and produce a prioritized gap report. Walks Karpathy's 15-control digital security checklist, adds account-recovery, SIM-swap, registrar, and hardware-key checks, and covers the AI-agent era: tokens your coding agents can read, MCP server trust, inbox-assistant prompt injection, clipboard exposure. Use when the user mentions 'personal opsec,' 'personal security audit,' 'secure my own accounts,' 'founder security,' 'Karpathy security checklist,' 'am I secure,' 'hardware key,' 'YubiKey,' 'SIM swap,' 'port-out PIN,' 'FileVault,' 'BitLocker,' 'password manager,' 'recovery codes,' 'registrar lock,' 'what can my AI agent see,' 'API keys on my laptop,' 'MCP trust,' or wants to harden their own accounts and machine."
+    },
+    {
+      "name": "privacy-engineering",
+      "description": "Implement and audit privacy controls in product and infrastructure \u2014 GDPR, CCPA / CPRA, LGPD, PIPEDA. Covers data minimization, lawful basis, consent management, data subject access requests (DSARs \u2014 access, deletion, portability), data processing agreements, DPIA / TIA, breach notification timing, data classification, and the technical implementation of 'right to be forgotten' across backups, caches, analytics, and third parties. Use when the user mentions 'GDPR,' 'CCPA,' 'CPRA,' 'data privacy,' 'privacy engineering,' 'data subject access request,' 'DSAR,' 'right to deletion,' 'right to be forgotten,' 'data portability,' 'consent management,' 'cookie consent,' 'data minimization,' 'DPIA,' 'data protection impact assessment,' 'breach notification,' 'DPA,' 'data processing agreement,' 'sub-processor,' 'cross-border data transfer,' 'SCCs,' or needs to implement or review privacy controls."
+    },
+    {
+      "name": "prompt-injection",
+      "description": "Audit applications for AI prompt injection, agent security, and LLM permission boundary vulnerabilities, including chatbots and agents hijacked by what they read: a malicious web page in a browsing agent, incoming emails, documents or tickets reaching an agent that can send replies, write files or call tools. Use when the user mentions 'prompt injection,' 'LLM security,' 'AI security,' 'jailbreak,' 'indirect prompt injection,' 'prompt leaking,' 'AI red team,' 'LLM vulnerabilities,' 'AI input validation,' 'system prompt extraction,' 'agent security,' 'MCP security,' 'AI permissions,' 'AI privilege escalation,' or needs to secure any application with AI features, AI agents, or LLM integrations."
+    },
+    {
+      "name": "recon",
+      "description": "Perform structured reconnaissance and attack surface enumeration for authorized penetration tests, CTF challenges, and bug bounty programs. Use when the user mentions 'recon,' 'reconnaissance,' 'enumerate,' 'attack surface,' 'subdomain enumeration,' 'port scan,' 'fingerprint,' 'asset discovery,' or needs to map a target's external footprint."
+    },
+    {
+      "name": "red-team-engagement",
+      "description": "Plan, scope, and execute an authorized red-team engagement \u2014 distinct from a penetration test. Covers engagement methodology, assumed-breach scenarios, ATT&CK emulation plans, rules of engagement, deconfliction with the blue team, post-engagement debriefs, and the program-level work that makes red teams actually improve defenses. Use when the user mentions 'red team,' 'red team engagement,' 'red teaming,' 'adversary emulation,' 'ATT&CK emulation,' 'assumed breach,' 'purple team exercise,' 'tabletop with technical execution,' 'red team scope,' 'rules of engagement,' 'red team RoE,' 'deconfliction,' 'red team debrief,' or wants to design or run a red-team engagement against systems with authorization."
+    },
+    {
+      "name": "scanner-pipeline",
+      "description": "Set up and run deterministic security scanners across a repo or a whole fleet of repos \u2014 gitleaks, trufflehog, semgrep, osv-scanner, trivy, checkov, Brakeman, govulncheck, Supabase advisors, and (guarded) nuclei/ZAP \u2014 then normalize their output to findings.json or SARIF, dedupe, suppress with expiry, schedule in CI, and hand findings to fix agents. Use when the user mentions 'run scanners,' 'security scanning pipeline,' 'set up gitleaks,' 'semgrep in CI,' 'osv-scanner,' 'trivy fs,' 'SARIF,' 'code scanning,' 'scan all my repos,' 'security-scan workflow,' 'weekly security scan,' 'Supabase RLS advisor,' 'dedupe scanner findings,' 'suppression file,' 'stop asking Claude to hack my app,' or wants tools, not an agent, to find the bugs."
+    },
+    {
+      "name": "secrets-audit",
+      "description": "Find leaked secrets in source code, Git history, build artifacts, and infrastructure \u2014 and audit the secrets-management posture preventing future leaks. Use when the user mentions 'secrets audit,' 'secret scanning,' 'leaked credentials,' 'API key in code,' 'gitleaks,' 'trufflehog,' 'git history scan,' 'secrets management,' 'vault audit,' 'rotation policy,' 'AWS Secrets Manager,' 'HashiCorp Vault,' 'Doppler,' '1Password Secrets Automation,' 'sealed-secrets,' 'External Secrets Operator,' 'secrets in MCP config,' 'API key in Claude transcript,' 'is this key public,' or needs to find or prevent credential exposure."
+    },
+    {
+      "name": "security-comms",
+      "description": "Translate technical security work into the language of non-security audiences \u2014 board, executives, engineering, customer success, customers, legal, procurement, sales. Covers incident communication, post-mortem narrative, audit-findings-for-stakeholders, risk justification, security spend justification, and customer-facing breach disclosure. Use when the user mentions 'security comms,' 'communicate this finding,' 'explain to my boss,' 'board update,' 'executive summary,' 'incident communication,' 'breach notification letter,' 'customer disclosure,' 'security memo,' 'post-mortem narrative,' 'why this matters to the business,' 'translate this finding,' 'stakeholder update,' or has technical security work that needs to land with a non-security audience."
+    },
+    {
+      "name": "security-start",
+      "description": "Start here when a security ask is vague and no specific skill fits yet. Asks two or three questions about what you have (source code, a live site, a cloud setup, logs, a suspicious file, an auditor's request) and what's going on (building, shipping, an active incident, a compliance deadline), then hands off to the right skill or skills from this catalog, in order. It does no auditing itself. Use when the user says things like 'make this secure,' 'is this secure,' 'where do I start with security,' 'which security skill should I use,' 'security checkup,' 'what do we check,' 'secure my startup,' or 'help me with security' without naming a framework, a target or a tool. If the ask already names one (OWASP, a CVE, a workflow file, SOC 2, a phishing email, a pasted finding), use that skill directly instead."
+    },
+    {
+      "name": "siem-detection",
+      "description": "Engineer and audit SIEM detection rules \u2014 log source coverage, Sigma / KQL / SPL / Elastic query authoring, MITRE ATT&CK mapping, false-positive tuning, and detection-as-code workflows. Use when the user mentions 'SIEM,' 'detection engineering,' 'detection rules,' 'Sigma,' 'KQL,' 'SPL,' 'Splunk,' 'Sentinel,' 'Elastic,' 'Wazuh,' 'Chronicle,' 'detection-as-code,' 'MITRE ATT&CK mapping,' 'log coverage,' 'alert tuning,' 'use case development,' or needs help building or improving security detections."
+    },
+    {
+      "name": "soc-operations",
+      "description": "Build, run, and improve a Security Operations Center \u2014 alert prioritization, runbook authoring, escalation criteria, on-call structure, alert tuning workflow, MTTD / MTTR / fidelity KPIs, analyst tiering, and shift handoffs. Use when the user mentions 'SOC,' 'security operations,' 'SOC analyst,' 'alert triage workflow,' 'runbook,' 'escalation,' 'on-call,' 'SOC tiering,' 'tier 1 / tier 2,' 'MTTD,' 'MTTR,' 'alert fatigue,' 'shift handoff,' 'SOAR,' or wants to design or improve a security operations team."
+    },
+    {
+      "name": "threat-hunting",
+      "description": "Conduct proactive, hypothesis-driven threat hunts \u2014 search SIEM / EDR / logs for adversaries who haven't tripped an alert yet. ATT&CK-driven, hypothesis-based methodology. Use when the user mentions 'threat hunting,' 'proactive hunt,' 'TaHiTI,' 'PEAK framework,' 'MITRE ATT&CK hunt,' 'hypothesis-driven hunt,' 'hunt hypothesis,' 'living off the land,' 'LOLBins,' 'beaconing,' 'lateral movement detection,' 'data staging,' 'persistence hunting,' or wants to find threats that have evaded existing detections."
+    },
+    {
+      "name": "threat-modeling",
+      "description": "Run a structured threat-modeling session for a new feature, system, or architecture \u2014 STRIDE, attack trees, data flow diagrams, abuse cases. Use when the user mentions 'threat model,' 'threat modeling,' 'STRIDE,' 'attack tree,' 'abuse case,' 'data flow diagram,' 'DFD,' 'security architecture review,' 'design review,' 'pre-implementation security,' 'shift left,' 'what could go wrong,' or needs strategic security thinking before code is written."
+    },
+    {
+      "name": "variant-analysis",
+      "description": "Start from a confirmed bug and hunt its siblings: generalize the root cause (source, sink, missing guard), encode it as a static-analysis query with positive and negative test cases, or a non-destructive nuclei template for variants visible only over HTTP, run it across the codebase or the whole org, close every hit with a verdict linked to the original, and keep the check in CI so the bug class stays fixed. Use when the user mentions 'variant analysis,' 'find variants,' 'where else does this bug exist,' 'are there more bugs like this,' 'same bug in other routes,' 'custom semgrep rule,' 'semgrep --test,' 'ruleid annotation,' 'CodeQL query for this bug,' 'CodeQL query test,' 'nuclei template for this bug,' 'turn this bug into a check,' 'stop this bug class coming back,' or has a known bug and wants every other instance of it."
+    },
+    {
+      "name": "vuln-research",
+      "description": "Research a specific CVE or vulnerability disclosure end-to-end \u2014 what version is affected, is your code reachable, is there a public PoC, is there a patch, what's the exposure window, what's the mitigation if you can't patch immediately. Use when the user mentions 'CVE,' 'vulnerability research,' 'is this CVE relevant,' 'zero-day,' 'CISA KEV,' 'GitHub Security Advisory,' 'reachability analysis,' 'patch analysis,' 'exploit availability,' 'EPSS,' 'CVSS,' or 'should we drop everything and patch this.'"
+    },
+    {
+      "name": "web-pentest",
+      "description": "Perform black-box / grey-box web application penetration testing on an authorized target \u2014 auth bypass, IDOR, session handling, business-logic flaws, parameter tampering, Burp Suite / OWASP ZAP workflows. Use when the user mentions 'web pentest,' 'web application penetration test,' 'pentesting,' 'bug bounty,' 'Burp Suite,' 'ZAP,' 'OWASP testing,' 'authentication testing,' 'session testing,' 'authorization testing,' 'web vulnerability testing,' or has explicit authorization to test a live web application."
+    },
+    {
+      "name": "security-audit",
+      "description": "Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Use for security questions, focused reviews, vulnerability research, security audits, or pen tests. Run the complete workflow only for explicit codebase audit or pen-test requests, full/comprehensive/end-to-end reviews, or requested report artifacts."
+    }
+  ],
+  "homepage": "https://iteractive.dev",
+  "categories": [
+    "Security"
+  ],
+  "icon": "icon.png"
+}

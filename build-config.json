@@ -1,0 +1,129 @@
+{
+  "repos": [
+    {
+      "path": "/Users/bradhallett/Projects/Agent Plugins/cybersecurity-skills",
+      "url": "https://github.com/briiirussell/cybersecurity-skills",
+      "rel": "../cybersecurity-skills"
+    },
+    {
+      "path": "/Users/bradhallett/Projects/Agent Plugins/security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "rel": "../security-audit-skill"
+    }
+  ],
+  "adapter_dir": "/Users/bradhallett/Projects/Agent Plugins/cyber-enconvo",
+  "workspace": "/Users/bradhallett/Projects/Agent Plugins",
+  "prefix": "cyber",
+  "plugin_name": "cyber-enconvo",
+  "plugin_description": "Cybersecurity agents for Enconvo: AppSec and supply chain, offensive and recon, detection and response, cloud, compliance, AI security, and governance - plus Cloudflare's multi-phase security-audit. 43 skills in one updatable plugin, each at its upstream path.",
+  "marketplace_name": "cyber-enconvo",
+  "category": "development",
+  "marketplace_description": "Cybersecurity for Enconvo, one updatable plugin: AppSec, offensive, detection, cloud, compliance, AI security, governance, plus Cloudflare's security-audit. Built from briiirussell/cybersecurity-skills and cloudflare/security-audit-skill (MIT). By Iteractive Development.",
+  "owner": {
+    "name": "Iteractive Development",
+    "url": "https://iteractive.dev"
+  },
+  "groups": {
+    "appsec": {
+      "description": "AppSec & supply-chain agent: owasp-audit, api-audit, dependency-audit, secrets-audit, crypto-audit, mobile-audit, native-code-review, fuzzing-harness, patch-sweep, variant-analysis, scanner-pipeline, cicd-security.",
+      "skills": [
+        "owasp-audit",
+        "api-audit",
+        "dependency-audit",
+        "secrets-audit",
+        "crypto-audit",
+        "mobile-audit",
+        "native-code-review",
+        "fuzzing-harness",
+        "patch-sweep",
+        "variant-analysis",
+        "scanner-pipeline",
+        "cicd-security"
+      ]
+    },
+    "offensive": {
+      "description": "Offensive & recon agent: recon, osint-recon, web-pentest, red-team-engagement, business-logic-testing.",
+      "skills": [
+        "business-logic-testing",
+        "osint-recon",
+        "owasp-audit",
+        "recon",
+        "red-team-engagement",
+        "web-pentest"
+      ]
+    },
+    "detect": {
+      "description": "Detect & respond agent: incident-triage, malware-triage, disk-forensics, siem-detection, soc-operations, threat-hunting, breach-patterns, log-watch.",
+      "skills": [
+        "incident-triage",
+        "malware-triage",
+        "disk-forensics",
+        "siem-detection",
+        "soc-operations",
+        "threat-hunting",
+        "breach-patterns",
+        "log-watch"
+      ]
+    },
+    "cloud": {
+      "description": "Cloud & infra agent: cloud-audit, container-audit, iam-audit.",
+      "skills": [
+        "cloud-audit",
+        "container-audit",
+        "iam-audit"
+      ]
+    },
+    "ai": {
+      "description": "AI security agent: prompt-injection, ai-risk-management, agent-supply-chain-audit.",
+      "skills": [
+        "prompt-injection",
+        "ai-risk-management",
+        "agent-supply-chain-audit"
+      ]
+    },
+    "govern": {
+      "description": "Design & governance agent: threat-modeling, vuln-research, finding-triage, csf-mapping, security-comms, personal-opsec, security-start.",
+      "skills": [
+        "threat-modeling",
+        "vuln-research",
+        "finding-triage",
+        "csf-mapping",
+        "security-comms",
+        "personal-opsec",
+        "security-start"
+      ]
+    },
+    "compliance": {
+      "description": "Compliance & privacy agent: privacy-engineering, pci-audit, hipaa-audit, control-audit.",
+      "skills": [
+        "privacy-engineering",
+        "pci-audit",
+        "hipaa-audit",
+        "control-audit"
+      ]
+    },
+    "audit": {
+      "description": "Cloudflare multi-phase security audit: security-audit.",
+      "skills": [
+        "security-audit"
+      ]
+    }
+  },
+  "flatten": true,
+  "agents": {
+    "enabled": true,
+    "title_prefix": "Cyber",
+    "title_overrides": {
+      "appsec": "AppSec"
+    },
+    "shared_skills": {
+      "owasp-audit": [
+        "appsec",
+        "offensive"
+      ]
+    }
+  },
+  "plugin_title": "Cybersecurity",
+  "plugin_category": "Security",
+  "plugin_icon": "/Users/bradhallett/Projects/Agent Plugins/.enconvo/assets/cyber-icon.png"
+}

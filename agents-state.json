@@ -1,0 +1,12 @@
+{
+  "agents": {
+    "appsec": "agent|5YSsUyy3xRFcl3hwkrW3",
+    "offensive": "agent|sWdgH5L0bGWPicNdxLXo",
+    "detect": "agent|Fw4s5wh3wRb89aUuJDuc",
+    "cloud": "agent|knOFDFOCtiO6H3s8b6Lj",
+    "ai": "agent|A4Ph5IU6ClmqifRREjjh",
+    "govern": "agent|qJ9tOBHxR44dv7qvWGov",
+    "compliance": "agent|o3VoXbzKdYTQbLvq62gQ",
+    "audit": "agent|boCYWjaRpAXeDG3NqP9O"
+  }
+}
