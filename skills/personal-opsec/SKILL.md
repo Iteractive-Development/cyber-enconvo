@@ -2,7 +2,6 @@
 name: personal-opsec
 description: "Audit one person's own security setup — the founder or operator who holds the keys to the stack — and produce a prioritized gap report. Walks Karpathy's 15-control digital security checklist, adds account-recovery, SIM-swap, registrar, and hardware-key checks, and covers the AI-agent era: tokens your coding agents can read, MCP server trust, inbox-assistant prompt injection, clipboard exposure. Use when the user mentions 'personal opsec,' 'personal security audit,' 'secure my own accounts,' 'founder security,' 'Karpathy security checklist,' 'am I secure,' 'hardware key,' 'YubiKey,' 'SIM swap,' 'port-out PIN,' 'FileVault,' 'BitLocker,' 'password manager,' 'recovery codes,' 'registrar lock,' 'what can my AI agent see,' 'API keys on my laptop,' 'MCP trust,' or wants to harden their own accounts and machine."
 allowed-tools: Read, Grep, Glob, Bash(fdesetup status:*), Bash(/usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate:*), Bash(/usr/libexec/ApplicationFirewall/socketfilterfw --getstealthmode:*), Bash(scutil --dns:*), Bash(spctl --status:*), Bash(csrutil status:*), Bash(sw_vers:*), Bash(which:*), Bash(ls -l:*), Bash(gh auth status:*), Bash(whois:*), Bash(manage-bde -status:*), Bash(lsblk:*), Bash(resolvectl status:*)
-visibility: scoped
 ---
 
 # Personal OpSec — Audit One Operator's Own Security Setup

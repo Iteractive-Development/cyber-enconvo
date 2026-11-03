@@ -2,7 +2,6 @@
 name: log-watch
 description: "Set up a scheduled agent that reads a small team's existing production logs, flags suspicious activity, and pages a human, without a SIEM or security staff. Use when the user mentions 'log watch,' 'watch my logs,' 'alert me if someone is attacking,' 'no SIEM,' 'poor man's SIEM,' 'agent reads CloudTrail,' 'cron job that checks logs,' 'page me on suspicious logins,' 'Vercel logs alerting,' 'Sentry security alerts,' 'Supabase auth logs,' 'Stripe dispute spike,' 'credential stuffing alert,' 'two-stage classifier,' 'Haiku then Sonnet,' 'log monitoring cost,' or has Vercel / Heroku / Render / Sentry / Postgres / Stripe / Cloudflare / CloudTrail / GitHub logs and wants to know when something bad happens."
 allowed-tools: Read, Grep, Glob, Write
-visibility: scoped
 ---
 
 # Log Watch — Scheduled Agent Log Review and Paging for Teams Without a SIEM

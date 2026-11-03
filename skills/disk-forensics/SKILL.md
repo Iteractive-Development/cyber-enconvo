@@ -2,7 +2,6 @@
 name: disk-forensics
 description: "Analyze disk images, file systems, and memory captures for digital evidence recovery in forensic investigations and CTF challenges. Use when the user mentions 'disk forensics,' 'forensic analysis,' 'disk image,' 'file carving,' 'deleted files,' 'evidence recovery,' 'timeline analysis,' 'memory forensics,' 'volatility,' 'autopsy,' 'sleuthkit,' 'plaso,' 'log2timeline,' 'artifact analysis,' 'chain of custody,' or needs to examine a forensic image."
 allowed-tools: Read, Grep, Glob, Bash(file:*), Bash(sha256sum:*), Bash(fdisk -l:*), Bash(mmls:*), Bash(fsstat:*), Bash(fls:*), Bash(icat:*), Bash(strings:*)
-visibility: scoped
 ---
 
 # Disk Forensics — Digital Evidence Analysis

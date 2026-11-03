@@ -2,7 +2,6 @@
 name: business-logic-testing
 description: "Test an authorized web application for business-logic flaws and race conditions — the classes scanners cannot find. Model invariants (conservation of value, uniqueness, monotonicity, exclusivity), build an Actor x Action x Resource matrix, abuse state machines (skip/reorder/replay steps, limit-slicing), find numeric bugs (float-vs-decimal rounding, cross-currency refund arbitrage, negative amounts), stale feature gates, and saga gaps; prove concurrency bugs (double-spend, lost update, idempotency-key reuse) with controlled parallel requests. Use when the user mentions 'business logic testing,' 'race condition,' 'double spend,' 'TOCTOU,' 'concurrency bug,' 'idempotency,' 'coupon reuse,' 'workflow bypass,' 'limit bypass,' 'negative amount,' 'refund arbitrage,' 'parallel request attack,' or 'logic flaw.'"
 allowed-tools: Read, Grep, Glob
-visibility: scoped
 ---
 
 # Business Logic Testing — Invariants, State-Machine Abuse, Race Conditions

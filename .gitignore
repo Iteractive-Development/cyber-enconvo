@@ -1,3 +1,10 @@
 node_modules/
 .DS_Store
 *.log
+
+# macOS sync-conflict copies
+* 2.*
+* 3.*
+agents-state.json
+agent-prompts/
+agent-map.json

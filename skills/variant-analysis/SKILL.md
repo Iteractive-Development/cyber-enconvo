@@ -2,7 +2,6 @@
 name: variant-analysis
 description: "Start from a confirmed bug and hunt its siblings: generalize the root cause (source, sink, missing guard), encode it as a static-analysis query with positive and negative test cases, or a non-destructive nuclei template for variants visible only over HTTP, run it across the codebase or the whole org, close every hit with a verdict linked to the original, and keep the check in CI so the bug class stays fixed. Use when the user mentions 'variant analysis,' 'find variants,' 'where else does this bug exist,' 'are there more bugs like this,' 'same bug in other routes,' 'custom semgrep rule,' 'semgrep --test,' 'ruleid annotation,' 'CodeQL query for this bug,' 'CodeQL query test,' 'nuclei template for this bug,' 'turn this bug into a check,' 'stop this bug class coming back,' or has a known bug and wants every other instance of it."
 allowed-tools: Read, Grep, Glob, Write, WebSearch, Bash(semgrep --test --metrics=off .semgrep/variants/), Bash(semgrep --validate --metrics=off --config .semgrep/variants/), Bash(semgrep scan --metrics=off --config .semgrep/variants/ --exclude .semgrep --json --output .security/out/variants.json .)
-visibility: scoped
 ---
 
 # Variant Analysis — One Bug In, Every Sibling Out

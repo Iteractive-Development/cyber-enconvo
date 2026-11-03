@@ -2,7 +2,6 @@
 name: owasp-audit
 description: "Audit application source code against the OWASP Top 10:2025 categories — broken access control (incl. SSRF), security misconfiguration, software supply chain failures, cryptographic failures, injection, insecure design, authentication failures, software and data integrity, logging and alerting failures, mishandling of exceptional conditions — with recon, a coverage ledger, per-finding verification, and a findings.json report. Use when the user mentions 'OWASP,' 'OWASP Top 10,' 'security audit,' 'security review,' 'secure code review,' 'code security review,' 'vulnerability audit,' 'find vulnerabilities,' 'appsec review,' 'application security audit,' 'check for security issues,' 'review this PR for security,' 'pre-merge security check,' 'diff review,' 'broken access control,' 'IDOR,' 'SQL injection,' 'XSS,' 'SSRF,' 'webhook security,' or wants to check their codebase for common security weaknesses."
 allowed-tools: Read, Grep, Glob, Bash(npm audit), Bash(npm audit --omit=dev)
-visibility: scoped
 ---
 
 # OWASP Audit — Source Code Security Review
