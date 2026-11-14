@@ -125,5 +125,7 @@
   },
   "plugin_title": "Cybersecurity",
   "plugin_category": "Security",
-  "plugin_icon": "../../../Projects/Agent Plugins/.enconvo/assets/cyber-icon.png"
+  "plugin_icon": "../../../Projects/Agent Plugins/.enconvo/assets/cyber-icon.png",
+  "root_package": true,
+  "plugin_version": "1.0.0"
 }
