@@ -68,7 +68,7 @@ Installed from GitHub, the plugin updates with **Plugins → cyber-enconvo → C
 To rebuild from the upstream repos (maintainer flow, needs the repo-to-plugin workspace):
 
 ```sh
-python3 ~/Projects/Agent\ Plugins/.enconvo/skills/repo-to-plugin/scripts/new_plugin.py sync --config <adapter>/build-config.json
+python3 ~/Enconvo/Plugins/extension-creator/skills/repo-to-plugin/scripts/new_plugin.py build --config <package repo>/build-config.json
 ```
 
 `build-config.json` is the maintainer build input; Enconvo loads none of it. `agents/` is what ships the helpers.
